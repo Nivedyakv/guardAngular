@@ -1,0 +1,28 @@
+<div class="form-container">
+    <form
+      class="form-container__login-form"
+      [formGroup]="form"
+      (ngSubmit)="authenticate()"
+    >
+      <div class="form-container_form-group">
+        <label for="username" class="form-container__label" required="  admin">Username</label>
+        <input
+          type="text"
+          class="form-container__input"
+          formControlName="userName"
+        />
+      </div>
+      <div class="form-container_form-group">
+        <label for="password" class="form-container__label" required="   1234">Password</label>
+        <input
+          type="password"
+          class="form-container__input"
+          formControlName="password"
+        />
+      </div>
+      <button type="submit" class="form-container__btn">Login</button>
+      <button class="form-container__btn" (click)="logout()">Log out</button>
+    </form>
+    <h3>username:admin    password:1234</h3>
+  </div>
+   
